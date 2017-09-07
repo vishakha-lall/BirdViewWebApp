@@ -1,1 +1,1 @@
-var app = angular.module("imageRecognition",['ui.router']);
+var app = angular.module("imageRecognition",['ngRoute']);
