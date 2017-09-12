@@ -1,1 +1,1 @@
-var routerApp = angular.module('routerApp', ['ui.router']);
+var app = angular.module('birdView', ['ui.router']);
