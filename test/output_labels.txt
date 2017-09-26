@@ -1,0 +1,200 @@
+175 pine warbler
+152 blue headed vireo
+024 red faced cormorant
+085 horned lark
+029 american crow
+108 white necked raven
+164 cerulean warbler
+139 scarlet tanager
+174 palm warbler
+114 black throated sparrow
+178 swainson warbler
+022 chuck will widow
+048 european goldfinch
+110 geococcyx
+138 tree swallow
+125 lincoln sparrow
+132 white crowned sparrow
+064 ring billed gull
+046 gadwall
+185 bohemian waxwing
+006 least auklet
+082 ringed kingfisher
+183 northern waterthrush
+092 nighthawk
+035 purple finch
+163 cape may warbler
+066 western gull
+043 yellow bellied flycatcher
+083 white breasted kingfisher
+126 nelson sharp tailed sparrow
+010 red winged blackbird
+072 pomarine jaeger
+089 hooded merganser
+133 white throated sparrow
+176 prairie warbler
+039 least flycatcher
+130 tree sparrow
+051 horned grebe
+143 caspian tern
+062 herring gull
+014 indigo bunting
+105 whip poor will
+170 mourning warbler
+037 acadian flycatcher
+123 henslow sparrow
+056 pine grosbeak
+166 golden winged warbler
+106 horned puffin
+038 great crested flycatcher
+119 field sparrow
+017 cardinal
+095 baltimore oriole
+059 california gull
+118 house sparrow
+189 red bellied woodpecker
+032 mangrove cuckoo
+149 brown thrasher
+004 groove billed ani
+013 bobolink
+027 shiny cowbird
+021 eastern towhee
+019 gray catbird
+093 clark nutcracker
+100 brown pelican
+179 tennessee warbler
+098 scott oriole
+071 long tailed jaeger
+150 sage thrasher
+173 orange crowned warbler
+074 florida jay
+113 baird sparrow
+160 black throated blue warbler
+099 ovenbird
+162 canada warbler
+142 black tern
+063 ivory gull
+011 rusty blackbird
+087 mallard
+116 chipping sparrow
+159 black and white warbler
+198 rock wren
+131 vesper sparrow
+031 black billed cuckoo
+028 brown creeper
+079 belted kingfisher
+102 western wood pewee
+137 cliff swallow
+034 gray crowned rosy finch
+086 pacific loon
+168 kentucky warbler
+015 lazuli bunting
+001 black footed albatross
+180 wilson warbler
+018 spotted catbird
+181 worm eating warbler
+036 northern flicker
+068 ruby throated hummingbird
+192 downy woodpecker
+158 bay breasted warbler
+058 pigeon guillemot
+045 northern fulmar
+148 green tailed towhee
+030 fish crow
+008 rhinoceros auklet
+067 anna hummingbird
+096 hooded oriole
+052 pied billed grebe
+061 heermann gull
+172 nashville warbler
+182 yellow warbler
+104 american pipit
+140 summer tanager
+156 white eyed vireo
+050 eared grebe
+081 pied kingfisher
+155 warbling vireo
+165 chestnut sided warbler
+077 tropical kingbird
+111 loggerhead shrike
+154 red eyed vireo
+135 bank swallow
+060 glaucous winged gull
+094 white breasted nuthatch
+191 red headed woodpecker
+109 american redstart
+044 frigatebird
+157 yellow throated vireo
+088 western meadowlark
+047 american goldfinch
+186 cedar waxwing
+112 great grey shrike
+136 barn swallow
+161 blue winged warbler
+003 sooty albatross
+124 le conte sparrow
+078 gray kingbird
+129 song sparrow
+041 scissor tailed flycatcher
+134 cape glossy starling
+115 brewer sparrow
+188 pileated woodpecker
+002 laysan albatross
+151 black capped vireo
+120 fox sparrow
+026 bronzed cowbird
+025 pelagic cormorant
+144 common tern
+145 elegant tern
+073 blue jay
+128 seaside sparrow
+121 grasshopper sparrow
+147 least tern
+049 boat tailed grackle
+012 yellow headed blackbird
+101 white pelican
+200 common yellowthroat
+070 green violetear
+005 crested auklet
+196 house wren
+009 brewer blackbird
+040 olive sided flycatcher
+033 yellow billed cuckoo
+146 forsters tern
+197 marsh wren
+020 yellow breasted chat
+171 myrtle warbler
+184 louisiana waterthrush
+153 philadelphia vireo
+194 cactus wren
+023 brandt cormorant
+055 evening grosbeak
+084 red legged kittiwake
+107 common raven
+057 rose breasted grosbeak
+042 vermilion flycatcher
+076 dark eyed junco
+177 prothonotary warbler
+080 green kingfisher
+187 american three toed woodpecker
+054 blue grosbeak
+103 sayornis
+122 harris sparrow
+199 winter wren
+169 magnolia warbler
+090 red breasted merganser
+097 orchard oriole
+091 mockingbird
+190 red cockaded woodpecker
+007 parakeet auklet
+167 hooded warbler
+193 bewick wren
+117 clay colored sparrow
+195 carolina wren
+127 savannah sparrow
+053 western grebe
+141 artic tern
+065 slaty backed gull
+069 rufous hummingbird
+075 green jay
+016 painted bunting
