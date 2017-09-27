@@ -1,0 +1,5 @@
+com\birdwatcher\controller\LoginController.class
+com\birdwatcher\controller\MainController.class
+com\birdwatcher\WebAppInitializer.class
+com\birdwatcher\model\UserDTO.class
+com\birdwatcher\model\User.class
