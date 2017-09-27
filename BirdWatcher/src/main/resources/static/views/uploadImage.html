@@ -1,0 +1,14 @@
+<style>
+img{width:200px; height:200px;}
+</style>
+<div ng-controller="uploadImageController ">
+    <form>
+      <input type="file" ng-file-select="onFileSelect($files)" ng-model="imageSrc">
+      <!--  <input type="file" ng-file-select="onFileSelect($files)" multiple> -->
+    </form>
+    
+    <img ng-src="{{imageSrc}}" />
+    <button ng-click="submit()">Submit</button>
+      
+  </div>
+</div>
