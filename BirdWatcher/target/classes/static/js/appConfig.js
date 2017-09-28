@@ -28,11 +28,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
         	'': { templateUrl: '/views/signup.html' },
         }
     })
-    .state('uploadImage', {
-    	controller: '/views/controllers/uploadImageController.js',
-        url: '/uploadImage',
+    .state('upload', {
+    	controller: '/js/uploadImageController.js',
+        url: '/upload',
         views: {
-        	'': { templateUrl: '/views/uploadImage.html' },
+        	'': { templateUrl: '/views/upload.html' },
         }
     });
     $urlRouterProvider.otherwise('/login');
