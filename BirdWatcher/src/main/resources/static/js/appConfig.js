@@ -34,6 +34,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
         views: {
         	'': { templateUrl: '/views/upload.html' },
         }
+    })
+    .state('techstack', {
+        url: '/techstack',
+        views: {
+        	'': { templateUrl: '/views/techstack.html' },
+        }
     });
     $urlRouterProvider.otherwise('/login');
 }); 
