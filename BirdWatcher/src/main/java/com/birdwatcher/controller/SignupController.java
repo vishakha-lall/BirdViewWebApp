@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.birdwatcher.model.User;
 import com.birdwatcher.model.UserDTO;
+import com.birdwatcher.model.UserDirectory;
 
 @Controller
 @RequestMapping(value="/signup")
@@ -20,7 +21,10 @@ public class SignupController {
 		String username=activeUser.getUsername();
 		String email=activeUser.getEmail();
 		String password=activeUser.getPassword();
-		System.out.println(username);
+		UserDirectory users = new UserDirectory();
+		User newUser= new User();
+		users.addNewUser(username, password, email);
+		System.out.print(users.getUserDirectory());
 		return "success";
     }
 }
