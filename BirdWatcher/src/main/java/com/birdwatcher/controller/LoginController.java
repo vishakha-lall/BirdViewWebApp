@@ -30,17 +30,5 @@ public class LoginController {
 		else {
 			return "failure";
 		}
-		/*
-		
-		System.out.println(users.getUserDirectory());
-		if(username.equals("vishakha")) {
-			if(password.equals("awesome")) {
-				return "success";
-			}else {
-				return "failure";
-			}
-		}else {
-			return "failure";
-		}*/	
     }
 }

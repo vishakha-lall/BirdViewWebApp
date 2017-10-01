@@ -5,4 +5,7 @@ app.controller('homeController', function($scope,$location,$http){
 	$scope.techstack=function(){
 		$location.path('/techstack');
 	};
+	$scope.about=function(){
+		$location.path('/about');
+	};
 });

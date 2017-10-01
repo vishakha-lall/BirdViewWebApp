@@ -1,9 +1,0 @@
-com\birdwatcher\controller\UploadController.class
-com\birdwatcher\controller\LoginController.class
-com\birdwatcher\controller\MainController.class
-com\birdwatcher\WebAppInitializer.class
-com\birdwatcher\model\UserDTO.class
-com\birdwatcher\controller\SignupController.class
-com\birdwatcher\model\UserDirectory.class
-com\birdwatcher\storage\StorageService.class
-com\birdwatcher\model\User.class

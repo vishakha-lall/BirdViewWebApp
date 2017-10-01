@@ -40,6 +40,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
         views: {
         	'': { templateUrl: '/views/techstack.html' },
         }
+    })
+    .state('about', {
+        url: '/about',
+        views: {
+        	'': { templateUrl: '/views/about.html' },
+        }
     });
     $urlRouterProvider.otherwise('/login');
 }); 
