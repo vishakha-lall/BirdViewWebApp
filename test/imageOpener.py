@@ -4,9 +4,11 @@ import cgitb
 import cgi
 import sys
 import json
+import io
 import mysql.connector #Using connector/python provided by oracle
 from mysql.connector import errorcode
 from collections import OrderedDict
+import urllib
 
 try:
 	import mastercontroller
@@ -21,8 +23,31 @@ cgitb.enable()
 
 print ("Content-type: application/json")
 print
-data = sys.stdin.read() 
+#data = sys.stdin.read()
+try:
+	data = cgi.FieldStorage()
+except Exception as e:
+	outfile = open("errors.log", "a")
+	outfile.write(str(e) + 'asdsas ')
+	outfile.close()
+	exit(1)
+#data = ['query_image']
+#data = data['query_image']
 
+#lullz = data['File']
+ruckus = []
+
+for items in data.keys():
+	variable = str(items)
+	ruckus.append(data.getvalue(variable))
+
+
+# outfile = open("errors.log", "a")
+# outfile.write(str(data))
+# outfile.close()
+
+
+data = ruckus[0]
 # 
 # #Reading data
 
