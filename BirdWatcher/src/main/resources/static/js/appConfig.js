@@ -46,6 +46,13 @@ app.config(function($stateProvider, $urlRouterProvider) {
         views: {
         	'': { templateUrl: '/views/about.html' },
         }
+    })
+    .state('result', {
+    	controller: '/js/resultController.js',
+        url: '/result',
+        views: {
+        	'': { templateUrl: '/views/result.html' },
+        }
     });
     $urlRouterProvider.otherwise('/login');
 }); 
