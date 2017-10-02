@@ -13,12 +13,13 @@ import org.apache.http.params.CoreProtocolPNames;
 import org.apache.http.util.EntityUtils;
 
 public class PostRequestGenerator {
-	public static void main(String[] args) throws Exception {
-	    HttpClient httpclient = new DefaultHttpClient();
+	
+	public String sendPostRequest(String pathtofile) throws Exception {
+		HttpClient httpclient = new DefaultHttpClient();
 	    httpclient.getParams().setParameter(CoreProtocolPNames.PROTOCOL_VERSION, HttpVersion.HTTP_1_1);
 
 	    HttpPost httppost = new HttpPost("http://localhost/imageOpener.py");
-	    File file = new File("/home/chitransh/Documents/Projects/birds/TestData/blue-winged-warbler.jpg");
+	    File file = new File(pathtofile);
 
 	    MultipartEntity mpEntity = new MultipartEntity();
 	    mpEntity.addPart("File", new FileBody(file));
@@ -43,15 +44,21 @@ public class PostRequestGenerator {
 	    }
 	    
 	    HttpEntity resEntity = response.getEntity();
-
+	    String jsonstring = null;
 	    System.out.println(response.getStatusLine());
 	    if (resEntity != null) {
-	      System.out.println(EntityUtils.toString(resEntity));
+	      jsonstring = (EntityUtils.toString(resEntity));
 	    }
 	    if (resEntity != null) {
 	      resEntity.consumeContent();
 	    }
 
 	    httpclient.getConnectionManager().shutdown();
+	    return jsonstring;
+	}
+	
+	public static void main(String[] args) throws Exception {
+	    PostRequestGenerator ts = new PostRequestGenerator();
+	    ts.sendPostRequest("/home/chitransh/Documents/Projects/birds/TestData/blue-winged-warbler.jpg");
 	  }
 	}
