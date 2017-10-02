@@ -1,89 +1,46 @@
-app.controller('uploadImageController', function($scope, fileReader,$http) {
-    $scope.imageSrc = "";
-    
-    $scope.$on("fileProgress", function(e, progress) {
-      $scope.progress = progress.loaded / progress.total;
-    });
-    $scope.submit=function(){
-    	$http({
-			method:"POST",
-			url:"/upload",
-			data:$scope.imageSrc
-		}).then(function success(response){
-			console.log("Image uploaded successfully");
-			alert(response.data);
-			alert($scope.imageSrc);
+app.directive('fileModel', ['$parse', function ($parse) {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            var model = $parse(attrs.fileModel);
+            var modelSetter = model.assign;
+            
+            element.bind('change', function(){
+                scope.$apply(function(){
+                    modelSetter(scope, element[0].files[0]);
+                });
+            });
+        }
+    };
+}]);
+
+app.service('fileUpload', ['$http','$location', function ($http) {
+    this.uploadFileToUrl = function(file, uploadUrl){
+        var fd = new FormData();
+        fd.append('file', file);
+        $http.post(uploadUrl, fd, {
+            transformRequest: angular.identity,
+            headers: {'Content-Type': undefined}
+        }).then(function success(response){
+			if (response.data=="failure"){
+				alert("Image could not be uploaded");
+				$location.path('/home');
+			}else{
+				alert("Image uploaded successfully");
+			}
 		}, function error(response){
-			console.log("Image not uploaded");
 		});
     }
-  });
-app.directive("ngFileSelect", function(fileReader, $timeout) {
-return {
-  scope: {
-    ngModel: '='
-  },
-  link: function($scope, el) {
-    function getFile(file) {
-      fileReader.readAsDataUrl(file, $scope)
-        .then(function(result) {
-          $timeout(function() {
-            $scope.ngModel = result;
-          });
-        });
-    }
+}]);
 
-    el.bind("change", function(e) {
-          var file = (e.srcElement || e.target).files[0];
-          getFile(file);
-        });
-      }
+app.controller('uploadController', ['$scope', 'fileUpload', function($scope, fileUpload){
+    
+    $scope.uploadFile = function(){
+        var file = $scope.myFile;
+        console.log('file is ' );
+        console.dir(file);
+        var uploadUrl = "/upload";
+        fileUpload.uploadFileToUrl(file, uploadUrl);
     };
-});
-app.factory("fileReader", function($q, $log) {
-  var onLoad = function(reader, deferred, scope) {
-    return function() {
-      scope.$apply(function() {
-        deferred.resolve(reader.result);
-      });
-    };
-};
-
-  var onError = function(reader, deferred, scope) {
-    return function() {
-      scope.$apply(function() {
-        deferred.reject(reader.result);
-      });
-    };
-  };
-
-  var onProgress = function(reader, scope) {
-    return function(event) {
-      scope.$broadcast("fileProgress", {
-        total: event.total,
-        loaded: event.loaded
-      });
-    };
-  };
-
-  var getReader = function(deferred, scope) {
-    var reader = new FileReader();
-    reader.onload = onLoad(reader, deferred, scope);
-    reader.onerror = onError(reader, deferred, scope);
-    reader.onprogress = onProgress(reader, scope);
-    return reader;
-  };
-
-  var readAsDataURL = function(file, scope) {
-    var deferred = $q.defer();
-
-    var reader = getReader(deferred, scope);
-    reader.readAsDataURL(file);
-
-    return deferred.promise;
-  };
-
-  return {
-    readAsDataUrl: readAsDataURL
-  };
-});
+    
+}]);

@@ -14,7 +14,6 @@ import com.birdwatcher.model.UserDirectory;
 @Controller
 @RequestMapping(value="/login")
 public class LoginController {
-	@SuppressWarnings("null")
 	@RequestMapping(value="/authenticate",method = RequestMethod.POST)
 	@ResponseBody
     public String authenticate(@RequestBody UserDTO activeUser){

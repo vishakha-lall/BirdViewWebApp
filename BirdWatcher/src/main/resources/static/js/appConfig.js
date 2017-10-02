@@ -29,7 +29,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
         }
     })
     .state('upload', {
-    	/*controller: '/js/uploadImageController.js',*/
+    	controller: '/js/uploadController.js',
         url: '/upload',
         views: {
         	'': { templateUrl: '/views/upload.html' },
