@@ -22,7 +22,9 @@ cgitb.enable()
 
 
 print ("Content-type: application/json")
+print "Access-Control-Allow-Origin: *"
 print
+
 #data = sys.stdin.read()
 try:
 	data = cgi.FieldStorage()
@@ -33,6 +35,10 @@ except Exception as e:
 	exit(1)
 #data = ['query_image']
 #data = data['query_image']
+
+outfile = open("errors.log", "a")
+outfile.write("new request")
+outfile.close()
 
 #lullz = data['File']
 ruckus = []
