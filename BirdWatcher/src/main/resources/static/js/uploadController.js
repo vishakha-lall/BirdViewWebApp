@@ -26,7 +26,7 @@ app.service('fileUpload', ['$http','$location', function ($http) {
 				alert("Image could not be uploaded");
 				$location.path('/home');
 			}else{
-				alert("Image uploaded successfully");
+				alert(JSON.stringify(response.data));
 			}
 		}, function error(response){
 		});
@@ -39,7 +39,7 @@ app.controller('uploadController', ['$scope', 'fileUpload', function($scope, fil
         var file = $scope.myFile;
         console.log('file is ' );
         console.dir(file);
-        var uploadUrl = "/upload";
+        var uploadUrl = "http://172.16.23.223/imageOpener.py";
         fileUpload.uploadFileToUrl(file, uploadUrl);
     };
     
