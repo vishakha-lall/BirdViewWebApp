@@ -122,17 +122,19 @@ except Exception as e:
 	exit(1)
 
 try:
-	texts, links, species = mastercontroller.main(val) #Calling mastercontroller
+	texts, links, species, locations, image_links = mastercontroller.main(val) #Calling mastercontroller
 except Exception as e:
 	outfile = open("errors.log", "a")
-	outfile.write(str(e))
+	outfile.write(str(e) + 'in imageOpener')
 	outfile.close()
 	exit(1)
 
 
 
-responsedict = {}
-responsedict = OrderedDict()
+#responsedict = {}
+#responsedict = OrderedDict()
+
+responsedict = []
 
 for i in range(0,5):
 	rowdict = {}
@@ -140,11 +142,16 @@ for i in range(0,5):
 	rowdict['species_name'] = species[i]
 	rowdict['extracted_text'] = texts[i]
 	rowdict['wikipedia_link'] = links[i]
-	responsedict[i] = rowdict
+	rowdict['location_info'] = locations[i]
+	rowdict['image_links'] = image_links[i]
+
+	responsedict.append(rowdict)
 
 global_response = {}
 global_response = OrderedDict()
 
 global_response['result'] = True
 global_response['tuples'] = responsedict
+
+
 print (json.JSONEncoder().encode(global_response))
