@@ -1,0 +1,68 @@
+		<div class="col-sm-8 col-sm-offset-2">
+				<div></div>
+				<strong><h2>Bird Watcher's WebApp</h2></strong>
+				<br/>
+				<strong><h3>Computer Networks Project</h3></strong>
+				<nr/>
+				Chitransh Gaurav 
+				<br/>
+				Vishakha Lall
+			</div>
+		
+        <!-- Javascript -->
+        <script src="//css/js/jquery-1.11.1.min.js"></script>
+        <script src="//css/bootstrap/js/bootstrap.min.js"></script>
+        <script src="//css/js/jquery.backstretch.min.js"></script>
+        <script src="//css/js/scripts.js"></script>
+                
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="/css/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/css/css/form-elements.css">
+        <link rel="stylesheet" href="/css/css/style.css">
+        <link rel="shortcut icon" href="/css/css/ico/favicon.png">
+
+        <!-- Top content -->
+        <div class="top-content">
+            <div class="inner-bg">
+                <div class="container">
+                                     
+                   		<div class="col-sm-3"></div>
+                        <div class="col-sm-6">
+                        	
+                        	<div class="form-box" ng-controller="loginController">
+	                        	<div class="form-top">
+	                        		<div class="form-top-left">
+	                        			<h3>Login to our site</h3>
+	                            		<p>Enter username and password to log on:</p>
+	                        		</div>
+	                        		<div class="form-top-right">
+	                        			<i class="fa fa-key"></i>
+	                        		</div>
+	                            </div>
+	                            <div ng-show="error" class="alert alert-danger">{{error}}</div>
+	                            <div class="form-bottom">
+				                    <form class="login-form" name="form" ng-submit="login()" role="form">
+				                    	<div class="form-group">
+				                    		<label>Username</label>
+				                    		<input type="text" name="username" id="username" class="form-username form-control" ng-model="username" required />
+				                    		<span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Username is required</span>
+				                        </div>
+				                        <div class="form-group">
+				                        	<label>Password</label>
+				                        	<input type="password" name="password" id="password" class="form-password form-control" ng-model="password" required />
+				                        	<span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+				                        </div>
+				                         <button type="submit" ng-disabled="form.$invalid || dataLoading" class="btn">Login</button>
+				                         <button ng-disabled="dataLoading" class="btn" ng-click="signup()">Sign up</button>
+				                        </form>
+			                    </div>
+		                    </div>
+                        </div>
+                        <div class="col-sm-3"></div>
+                       </div>
+                      </div>
+                     </div>
+       
+			

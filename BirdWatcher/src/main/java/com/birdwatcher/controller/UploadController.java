@@ -28,8 +28,6 @@ public class UploadController {
 		try {
 			storageService.store(file);
 			files.add(file.getOriginalFilename());
-			/*PostRequestGenerator post= new PostRequestGenerator();
-			String birdData=post.sendPostRequest(file);*/
 			return "success";
 			
 		} catch (Exception e) {
