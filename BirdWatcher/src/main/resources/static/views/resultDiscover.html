@@ -1,0 +1,70 @@
+    <!-- Bootstrap core CSS -->
+    <link href="/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="/css/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="/css/css/clean-blog.min.css" rel="stylesheet">
+
+ 
+    <div ng-controller="resultDiscoverController">
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>Result</h1>
+              <span class="subheading">Here is the result of your search</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-preview">
+          <img src="{{bird.data.image_links}}" alt="Bird Image" width="300" height="300">
+            <a target="_blank" href="{{birds[0].wikipedia_link}}">
+              <h2 class="post-title">
+                {{bird.data.species_name}}
+              </h2>
+              <h3 class="post-subtitle">
+                {{bird.data.extracted_text}}
+              </h3>
+            </a>
+            <p>Location Information: </p>
+            <p class="post-meta">{{bird.data.location_info}}</p>
+          </div>
+          <hr>
+         
+          <!-- Pager -->
+          <div class="clearfix">
+            <a class="btn btn-secondary float-right" href="http://localhost:8080/index.html#/home">Home &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/css/vendor/jquery/jquery.min.js"></script>
+    <script src="/css/vendor/popper/popper.min.js"></script>
+    <script src="/css/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="/css/js/clean-blog.min.js"></script>
+
+  </body>
+
+</html>

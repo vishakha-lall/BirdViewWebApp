@@ -8,4 +8,10 @@ app.controller('homeController', function($scope,$location,$http){
 	$scope.about=function(){
 		$location.path('/about');
 	};
+	$scope.dictionary=function(){
+		$location.path('/dictionary');
+	};
+	$scope.discover=function(){
+		$location.path('/discover');
+	};
 });

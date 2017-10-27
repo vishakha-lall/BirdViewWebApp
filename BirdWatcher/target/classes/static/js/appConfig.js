@@ -53,6 +53,27 @@ app.config(function($stateProvider, $urlRouterProvider) {
         views: {
         	'': { templateUrl: '/views/result.html' },
         }
+    })
+    .state('dictionary', {
+    	controller: '/js/dictionaryController.js',
+        url: '/dictionary',
+        views: {
+        	'': { templateUrl: '/views/dictionary.html' },
+        }
+    })
+    .state('discover', {
+    	controller: '/js/discoverController.js',
+        url: '/discover',
+        views: {
+        	'': { templateUrl: '/views/discover.html' },
+        }
+    })
+    .state('resultdiscover', {
+    	controller: '/js/resultDiscoverController.js',
+        url: '/resultDiscover',
+        views: {
+        	'': { templateUrl: '/views/resultDiscover.html' },
+        }
     });
     $urlRouterProvider.otherwise('/login');
 }); 
