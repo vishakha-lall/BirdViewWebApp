@@ -6,7 +6,7 @@ To provide an interactive platform where bird watchers can identify a bird that 
 
 **Bird Recognition:** The user uploads an image of a bird. The application returns the top 5 matches and relevant data of each bird.
 
-**Locate a Bird (in development stage): **The user queries for a bird. The WebApp returns the location closest to the user where the bird can be found.
+**Locate a Bird (in development stage):** The user queries for a bird. The WebApp returns the location closest to the user where the bird can be found.
 
 **Bird Dictionary:** This returns a list of all birds that the application is capable to identify. Currently the WebApp is trained to identify 200 different species of birds as sourced in the Caltech-UCSD Birds-200-2011 Dataset.
 
